@@ -13,7 +13,6 @@ sentiment_analyzer_url = os.getenv(
     default="http://localhost:5050/")
 
 
-
 # def analyze_review_sentiments(text):
 # request_url = sentiment_analyzer_url+"analyze/"+text
 # Add code for retrieving sentiments
@@ -36,6 +35,7 @@ def get_request(endpoint, **kwargs):
     except Exception:
         # If any error occurs
         print("Network exception occurred")
+
 
 def analyze_review_sentiments(text):
     request_url = sentiment_analyzer_url + "analyze/" + quote(text)

@@ -39,12 +39,15 @@ def login_user(request):
         data = {"userName": username, "status": "Authenticated"}
     return JsonResponse(data)
 
+
 def logout_request(request):
     logout(request)
     data = {"userName": ""}
     return JsonResponse(data)
 
 # Get the list of dealerships, or only the ones in a given state
+
+
 def get_dealerships(request, state="All"):
     if state == "All":
         endpoint = "/fetchDealers"

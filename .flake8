@@ -1,0 +1,11 @@
+[flake8]
+max-line-length = 120
+exclude =
+    .git,
+    __pycache__,
+    migrations,
+    node_modules,
+    server/frontend,
+    server/database
+per-file-ignores =
+    server/djangoapp/models.py:F401
